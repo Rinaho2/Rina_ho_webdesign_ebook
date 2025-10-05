@@ -1,0 +1,162 @@
+@media (max-width: 767px) {
+        section nav {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px 15px;
+        }
+
+        section nav .logo img {
+            width: 80px;
+        }
+
+        .menu-toggle {
+            display: flex;
+            order: 3;
+        }
+
+        section nav ul {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            order: 4;
+            padding: 10px 0;
+        }
+
+        section nav ul.active {
+            display: flex;
+        }
+
+        section nav li {
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        section nav li a {
+            font-size: 16px;
+        }
+
+        .social_icon {
+            order: 2;
+        }
+
+        .arrivals {
+            padding-top: 120px;
+        }
+
+        .arrivals h1 {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .arrivals .arrivals_box {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            width: 95%;
+        }
+
+        .arrivals .arrivals_box .arrivals_card {
+            width: 100%;
+            max-width: 250px;
+        }
+
+        footer .footer_main {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        footer .footer_main .tag {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        footer .footer_main .tag p {
+            width: 100%;
+        }
+    }
+
+    /* Mobile (480px - 599px) */
+    @media (max-width: 599px) {
+        .arrivals h1 {
+            font-size: 28px;
+        }
+
+        .arrivals .arrivals_box {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 15px;
+        }
+
+        .arrivals .arrivals_box .arrivals_card {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+        }
+
+        .arrivals .arrivals_box .arrivals_card .arrivals_image {
+            width: 120px;
+            height: 180px;
+        }
+
+        .arrivals .arrivals_box .arrivals_card .arrivals_tag p {
+            font-size: 14px;
+        }
+
+        footer .footer_main .tag h1 {
+            font-size: 20px;
+        }
+    }
+
+    /* Small Mobile (below 480px) */
+    @media (max-width: 479px) {
+        section nav .logo img {
+            width: 70px;
+        }
+
+        .arrivals {
+            padding-top: 100px;
+        }
+
+        .arrivals h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .arrivals .arrivals_box {
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            width: 90%;
+        }
+
+        .arrivals .arrivals_box .arrivals_card {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .arrivals .arrivals_box .arrivals_card .arrivals_image {
+            width: 150px;
+            height: 220px;
+        }
+
+        .arrivals .arrivals_box .arrivals_card .arrivals_tag p {
+            font-size: 16px;
+        }
+
+        footer .footer_main {
+            padding: 30px 15px;
+        }
+
+        footer .footer_main .tag h1 {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        footer .end {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        footer .end span {
+            margin-left: 0;
+        }
+    }
