@@ -101,3 +101,10 @@ section .main .main_img img{
     top: 90px;
     left: 20px;
 }
+// section nav .active{
+//     color: #441882;
+// }
+nav a.active,
+nav a:hover {
+  color: #aa45d8;
+}

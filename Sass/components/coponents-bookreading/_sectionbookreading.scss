@@ -46,3 +46,7 @@ section nav li a{
 section nav li a:hover{
     color: #e600ff;
 }
+nav a.active,
+nav a:hover {
+  color: #aa45d8;
+}

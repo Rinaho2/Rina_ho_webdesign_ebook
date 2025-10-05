@@ -55,6 +55,11 @@ section nav li a:hover {
   color: #e600ff;
 }
 
+nav a.active,
+nav a:hover {
+  color: #aa45d8;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
