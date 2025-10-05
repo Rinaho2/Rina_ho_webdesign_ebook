@@ -1,0 +1,141 @@
+@media (max-width: 480px) {
+    /* Navbar */
+    
+    .about {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .about .about_image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about .about_tag h1 {
+        font-size: 32px;
+        bottom: 20px;
+        text-align: center;
+    }
+
+    .about .about_tag p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .about .about_tag .about_btn {
+        top: 20px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 30px 10px;
+    }
+
+    .section {
+        padding: 15px 10px;
+        margin-bottom: 20px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+
+    .cta button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    footer .footer_main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .footer_main .tag {
+        margin: 20px 0;
+    }
+
+    footer .footer_main .tag img {
+        width: 80px;
+    }
+
+    .moon, .star {
+        display: none; /* Optional: hide for small screens for performance */
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about .about_image img {
+        width: 100%;
+    }
+
+    .about .about_tag h1 {
+        font-size: 48px;
+    }
+
+    .about .about_tag p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .section h2 {
+        font-size: 22px;
+    }
+
+    .section p {
+        font-size: 15px;
+    }
+
+    .cta button {
+        padding: 14px 25px;
+        font-size: 15px;
+    }
+
+    footer .footer_main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Large devices (laptops/desktops) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .about {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .about .about_image img {
+        width: 70%;
+    }
+
+    .about .about_tag {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .section p {
+        font-size: 16px;
+    }
+
+    .cta button {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}

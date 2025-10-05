@@ -1,0 +1,207 @@
+.about {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about_image img {
+    width: 800px;
+}
+
+.about .about_tag h1 {
+    font-size: 50px;
+    position: relative;
+    bottom: 35px;
+}
+
+.about .about_tag p {
+    line-height: 22px;
+    width: 650px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.about .about_tag .about_btn {
+    padding: 10px 20px;
+    background: #089da1;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    top: 50px;
+}
+
+/* General Styles */
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #f0f8ff, #ffeef8);
+    overflow-x: hidden;
+    color: #333;
+} */
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #6b4e77;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease forwards;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #9705df;
+    font-weight: bold;
+}
+
+.section {
+    background-color: #d2ccd6;
+    border-radius: 15px;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta button {
+    background-color: #a358d0;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta button:hover {
+    background-color: #8532b5;
+    box-shadow: 0 0 20px #a358d0;
+}
+
+/* Floating moon */
+.moon {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #fffacd, #f0e68c);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fdfdfd;
+    animation: floatMoon 6s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+/* @keyframes floatMoon {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(15px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+} */
+
+/* Floating stars */
+.star {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite alternate;
+}
+
+/* @keyframes twinkle {
+    0% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+} */
+
+/* Floating flower petals */
+.petal {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: fall linear infinite;
+}
+
+/* @keyframes fall {
+    0% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(900px) translateX(50px) rotate(360deg);
+    }
+} */
+
+/* Fade in animation */
+/* @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */

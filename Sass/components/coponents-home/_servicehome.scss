@@ -1,0 +1,31 @@
+.services {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.services .services_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services .services_card {
+    text-align: center;
+    width: 22%;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 8px #8610e7;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.services .services_card i {
+    font-size: 45px;
+    color: #6b12be;
+    margin-bottom: 15px;
+}
+
+.services .services_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px #8404ec;
+}
