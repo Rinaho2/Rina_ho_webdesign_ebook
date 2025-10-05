@@ -1,5 +1,4 @@
 @media (max-width: 600px) and (min-width: 350px) {
-    
     section nav{
         display: flex;
         align-items: center;
@@ -72,7 +71,6 @@
 
 /* Medium devices (tablets, 601px – 900px) */
 @media (max-width: 900px) and (min-width: 601px) {
-    
     section .main {
         flex-direction: column;
         text-align: center;
@@ -91,13 +89,12 @@
 
     section .main .main_img img {
         width: 70%;
-        margin: 30px auto;
+        margin: 20px auto;
     }
 
     .services .services_box {
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: -260px;
     }
 
     .services .services_box .services_card {
@@ -106,19 +103,14 @@
     }
 
     footer .footer_main {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     footer .footer_main .tag {
-        margin: 20px 0;
+        width: 45%;
+        margin: 10px;
     }
-
-    footer .footer_main .tag img {
-        width: 80px;
-    }
-
 }
 
 /* Large devices (desktops, 901px – 1200px) */
