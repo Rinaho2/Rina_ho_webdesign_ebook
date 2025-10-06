@@ -1,175 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ebook</title>
     <link rel="stylesheet" href="../css/read.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
-       * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333;
-            padding: 20px;
-        }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.6;
+        background-color: #f5f5f5;
+        color: #333;
+        padding: 20px;
+    }
 
+    .reading.book {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px;
+    }
+
+    .reading.book img {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .reading.book p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #444;
+        text-align: justify;
+    }
+
+    .reading.book button {
+        background-color: #2c3e50;
+        color: #fff;
+        border: none;
+        padding: 14px 40px;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        align-self: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .reading.book button:hover {
+        background-color: #34495e;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .reading.book button:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Tablet devices (768px and up) */
+    @media (min-width: 768px) {
         .reading.book {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            padding: 40px;
-        }
-
-        .reading.book img {
-            width: 100%;
-            height: auto;
-            max-height: 500px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            padding: 50px;
+            gap: 40px;
         }
 
         .reading.book p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #444;
-            text-align: justify;
+            font-size: 19px;
+            line-height: 1.9;
         }
 
         .reading.book button {
-            background-color: #2c3e50;
-            color: #fff;
-            border: none;
-            padding: 14px 40px;
+            padding: 16px 50px;
+            font-size: 17px;
+        }
+    }
+
+    /* Desktop devices (1024px and up) */
+    @media (min-width: 1024px) {
+        .reading.book {
+            padding: 60px;
+        }
+
+        .reading.book img {
+            max-height: 600px;
+        }
+
+        .reading.book p {
+            font-size: 20px;
+        }
+
+        .reading.book button {
+            padding: 18px 60px;
+            font-size: 18px;
+        }
+    }
+
+    /* Large desktop devices (1440px and up) */
+    @media (min-width: 1440px) {
+        .reading.book p {
+            font-size: 21px;
+            line-height: 2;
+        }
+    }
+
+    /* Small mobile devices (max 480px) */
+    @media (max-width: 480px) {
+        body {
+            padding: 10px;
+        }
+
+        .reading.book {
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .reading.book p {
             font-size: 16px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            align-self: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            line-height: 1.7;
         }
 
-        .reading.book button:hover {
-            background-color: #34495e;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        .reading.book button {
+            width: 100%;
+            padding: 12px 30px;
+            font-size: 15px;
         }
-
-        .reading.book button:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Tablet devices (768px and up) */
-        @media (min-width: 768px) {
-            .reading.book {
-                padding: 50px;
-                gap: 40px;
-            }
-
-            .reading.book p {
-                font-size: 19px;
-                line-height: 1.9;
-            }
-
-            .reading.book button {
-                padding: 16px 50px;
-                font-size: 17px;
-            }
-        }
-
-        /* Desktop devices (1024px and up) */
-        @media (min-width: 1024px) {
-            .reading.book {
-                padding: 60px;
-            }
-
-            .reading.book img {
-                max-height: 600px;
-            }
-
-            .reading.book p {
-                font-size: 20px;
-            }
-
-            .reading.book button {
-                padding: 18px 60px;
-                font-size: 18px;
-            }
-        }
-
-        /* Large desktop devices (1440px and up) */
-        @media (min-width: 1440px) {
-            .reading.book p {
-                font-size: 21px;
-                line-height: 2;
-            }
-        }
-
-        /* Small mobile devices (max 480px) */
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-
-            .reading.book {
-                padding: 20px;
-                gap: 20px;
-            }
-
-            .reading.book p {
-                font-size: 16px;
-                line-height: 1.7;
-            }
-
-            .reading.book button {
-                width: 100%;
-                padding: 12px 30px;
-                font-size: 15px;
-            }
-        }
+    }
 </style>
+
 <body>
-    
-        <div class="reading book ">
 
-            <img src="https://creativemindsdubai.com/cdn/shop/products/279392_5000x.jpg?v=1645624264" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laborum odit, aliquid sunt voluptas unde modi quidem debitis molestias corrupti odio. Officiis facilis quos quo provident omnis quisquam laborum assumenda!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae enim delectus est iste modi excepturi eum officiis iusto, ipsum atque exercitationem dolorum aut accusantium sequi maiores rem voluptatum. Fuga, ad.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error rem saepe sapiente? Doloremque recusandae nostrum fugit alias. Nemo, voluptas! Sequi, hic recusandae! Enim ea quas iusto similique doloremque pariatur minus.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate nesciunt ab veritatis, delectus quia inventore minima aut soluta omnis itaque quod facere! Sit, consequuntur iste? Magni sapiente necessitatibus expedita reiciendis!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum fugiat incidunt ex doloribus quae pariatur beatae fuga unde similique soluta eveniet ut, eum quisquam, saepe consectetur quo blanditiis perferendis error?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quam molestiae illum in alias accusantium cumque deserunt sunt ducimus dolore ipsam, quas dicta, facilis enim? Quaerat quasi consequuntur ea saepe?
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel numquam quae eaque ex quis quo unde temporibus? Deserunt, repellat? Quibusdam, odio ex! Rem voluptatem obcaecati fuga incidunt quam fugiat id?
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui perferendis soluta odit eligendi rerum quo deserunt corporis reprehenderit at consequuntur. Illum quas vitae similique rerum commodi, fuga veniam officia incidunt!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab suscipit deleniti aspernatur corporis quae quis repudiandae molestiae, beatae magni incidunt obcaecati odit quibusdam dignissimos dicta. Molestiae repellat iusto sit minima!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, corporis quis repellat, eius iure minus debitis assumenda dolore enim sit ut veniam vitae facilis nostrum voluptatem voluptatibus! Nulla, perferendis dignissimos!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tenetur dolores neque nam in deleniti illo magni exercitationem vel esse porro nihil ducimus odio et est perspiciatis, explicabo qui doloribus?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nemo nam incidunt, consectetur eum delectus repellendus at quasi reiciendis reprehenderit aliquam asperiores voluptate explicabo ratione molestias veritatis, saepe nisi? Consequuntur?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae nulla commodi velit provident dolor deleniti eaque doloremque laudantium, totam iusto deserunt. Nostrum beatae hic autem nobis aspernatur ratione quos perferendis.
-            </p>
-            <button>finish</button>
-        </div>
+    <div class="reading book ">
+
+        <img src="https://creativemindsdubai.com/cdn/shop/products/279392_5000x.jpg?v=1645624264" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laborum odit, aliquid sunt voluptas unde modi
+            quidem debitis molestias corrupti odio. Officiis facilis quos quo provident omnis quisquam laborum
+            assumenda!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae enim delectus est iste modi excepturi eum
+            officiis iusto, ipsum atque exercitationem dolorum aut accusantium sequi maiores rem voluptatum. Fuga, ad.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error rem saepe sapiente? Doloremque recusandae
+            nostrum fugit alias. Nemo, voluptas! Sequi, hic recusandae! Enim ea quas iusto similique doloremque pariatur
+            minus.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate nesciunt ab veritatis, delectus quia
+            inventore minima aut soluta omnis itaque quod facere! Sit, consequuntur iste? Magni sapiente necessitatibus
+            expedita reiciendis!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum fugiat incidunt ex doloribus quae pariatur
+            beatae fuga unde similique soluta eveniet ut, eum quisquam, saepe consectetur quo blanditiis perferendis
+            error?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quam molestiae illum in alias accusantium
+            cumque deserunt sunt ducimus dolore ipsam, quas dicta, facilis enim? Quaerat quasi consequuntur ea saepe?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel numquam quae eaque ex quis quo unde
+            temporibus? Deserunt, repellat? Quibusdam, odio ex! Rem voluptatem obcaecati fuga incidunt quam fugiat id?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui perferendis soluta odit eligendi rerum quo
+            deserunt corporis reprehenderit at consequuntur. Illum quas vitae similique rerum commodi, fuga veniam
+            officia incidunt!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab suscipit deleniti aspernatur corporis quae quis
+            repudiandae molestiae, beatae magni incidunt obcaecati odit quibusdam dignissimos dicta. Molestiae repellat
+            iusto sit minima!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, corporis quis repellat, eius iure minus
+            debitis assumenda dolore enim sit ut veniam vitae facilis nostrum voluptatem voluptatibus! Nulla,
+            perferendis dignissimos!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tenetur dolores neque nam in deleniti
+            illo magni exercitationem vel esse porro nihil ducimus odio et est perspiciatis, explicabo qui doloribus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nemo nam incidunt, consectetur eum delectus
+            repellendus at quasi reiciendis reprehenderit aliquam asperiores voluptate explicabo ratione molestias
+            veritatis, saepe nisi? Consequuntur?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae nulla
+            commodi velit provident dolor deleniti eaque doloremque laudantium, totam iusto deserunt. Nostrum beatae hic
+            autem nobis aspernatur ratione quos perferendis.
+        </p>
+        <a href="./bookreading.html"><button>finish</button></a>
+
+    </div>
 
 
-    
+
 </body>
+
 </html>
